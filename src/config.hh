@@ -77,7 +77,9 @@ const int pre_container_chunk_size=1024;
 
 /** If a point is within this distance of a cutting plane, then the code
  * assumes that point exactly lies on the plane. */
-const double tolerance=10.*std::numeric_limits<double>::epsilon();
+// std::numeric_limits<double>::epsilon()=2.2-16
+// probably not safe to set tolerance below DBL_EPSILON, but needed for given NBody sims
+const double tolerance=1e-18;
 
 const double big_tolerance_fac=20.;
 

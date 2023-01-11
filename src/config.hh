@@ -79,7 +79,7 @@ const int pre_container_chunk_size=1024;
  * assumes that point exactly lies on the plane. */
 // std::numeric_limits<double>::epsilon()=2.2-16
 // probably not safe to set tolerance below DBL_EPSILON, but needed for given NBody sims
-const double tolerance=1e-18;
+const double tolerance=1e-20;
 
 const double big_tolerance_fac=20.;
 
